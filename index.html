@@ -55,6 +55,7 @@
             // overlays
             var political = L.imageOverlay('political.png', bounds); 
             var techtonic = L.imageOverlay('techtonics.png', bounds);
+            var terrain = L.imageOverlay('terrain.png', bounds);
 
             // LINEAR MEASURE
             map.addControl(new L.Control.LinearMeasurement({
@@ -101,6 +102,7 @@
             };
             var overlayMaps = {
                 "Political Boundaries": political,
+                "Terrain Overlay": terrain,
                 "Techtonic Faults": techtonic,
                 "Grid Lines": grid
             };

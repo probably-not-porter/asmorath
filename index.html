@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Asmorath</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="plugins/Leaflet.LinearMeasurement.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+        <style>
+            #map { 
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+            }
+            #coord{
+                position:absolute;
+                top: 12px;
+                left: 50px;
+                background-color: rgba(255,255,255,0.8);
+                padding: 4px;
+                border-radius: 2px;
+                z-index: 1000;
+                border: 1px solid black;
+            }
+        </style>
+
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        <script src="plugins/Leaflet.LinearMeasurement.js"></script>
+    </head>
+    <body>
+        <div id="map"></div>
+        <span id="coord"></span>
+
+
+        <script async defer>
+            // ====================== SETUP =======================
+            var map = L.map('map', {
+                crs: L.CRS.Simple,
+                minZoom: 0
+            });
+            var bounds = [[0,0], [100,100]];
+
+            var base1 = L.imageOverlay('Asmorath.png', bounds).addTo(map); // basemaps
+
+            // overlays
+            var political = L.imageOverlay('political.png', bounds); 
+            var techtonic = L.imageOverlay('techtonics.png', bounds);
+
+            // LINEAR MEASURE
+            map.addControl(new L.Control.LinearMeasurement({
+                unitSystem: 'imperial',
+                color: '#FF0080',
+                type: 'line'
+            }));
+            // COORD TRACKING
+            map.addEventListener('mousemove', function(ev) {
+                let lat = Math.round(ev.latlng.lat * 100) / 100;
+                let lng = Math.round(ev.latlng.lng * 100) / 100;
+                document.getElementById("coord").innerText = `Lat: ${lat}, Long: ${lng}`;
+            });
+
+
+
+            // ===================== Ecological Markers =====================
+            // Crater
+            var circle = L.circle([378, 658], {
+                color: '#f03',
+                fillColor: '#ee0000',
+                fillOpacity: 0.2,
+                opacity: 0,
+                radius: 25
+            }).addTo(map).bindPopup(
+                `<h2>Dasmor Crater</h2>`
+            );
+
+            var l1 = L.polyline([[10, 0], [10, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l2 = L.polyline([[20, 0], [20, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l3 = L.polyline([[30, 0], [30, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l4 = L.polyline([[40, 0], [40, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l5 = L.polyline([[50, 0], [50, 100]], {color: 'black', weight: '2',  dashArray: '10, 10', dashOffset: '0'}),
+                l6 = L.polyline([[60, 0], [60, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l7 = L.polyline([[70, 0], [70, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l8 = L.polyline([[80, 0], [80, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
+                l9 = L.polyline([[90, 0], [90, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'})
+            
+            var grid = L.layerGroup([l1, l2, l3, l4, l5, l6, l7, l8, l9]);
+
+            // ======================= MAPS ===========================
+            var baseMaps = {
+                "Base Layer 1": base1
+            };
+            var overlayMaps = {
+                "Political Boundaries": political,
+                "Techtonic Faults": techtonic,
+                "Grid Lines": grid
+            };
+            map.fitBounds(bounds);
+            var layerControl = L.control.layers(null, overlayMaps).addTo(map);
+        </script>
+    </body>
+</html>

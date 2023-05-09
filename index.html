@@ -75,15 +75,27 @@
 
             // ===================== Ecological Markers =====================
             // Crater
-            var circle = L.circle([378, 658], {
-                color: '#f03',
-                fillColor: '#ee0000',
-                fillOpacity: 0.2,
-                opacity: 0,
-                radius: 25
-            }).addTo(map).bindPopup(
-                `<h2>Dasmor Crater</h2>`
+            L.marker([37.86, 65.28]).addTo(map).bindPopup(
+                `<h2>Dasmor Crater</h2>
+                <p>The crator is the result of a massive meteor that hit the planet 50-60 million years ago. Possibly the root cause of techtonic/volcanic activity in Panasmor, and the creation of the Dasmor Isles.</p>
+                `
             );
+
+            // Lake
+            L.marker([44.31, 46.82]).addTo(map).bindPopup(
+                `<h2>Big Lake</h2>
+                <p>The lake is extremely deep, reaching to far below sea level. It was formed billions of years ago in the early stages of the planet, when the continents formed, and long before they split. The lake itself was formed in the caldera of the ancient supervolcano that formed the continents.</p>
+                `
+            );
+
+            // Western Mantle Plume
+            L.marker([29.93, 17.44]).addTo(map).bindPopup(
+                `<h2>Western Mantle Plume</h2>
+                <p>This island chain is some of the newest geology on the planet, the result of the main Panasmor plate slowly breaking and colliding with its neighbors.</p>
+                <a href='https://en.wikipedia.org/wiki/Mantle_plume'>Mantle Plume info</a>
+                `
+            );
+
 
             var l1 = L.polyline([[10, 0], [10, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
                 l2 = L.polyline([[20, 0], [20, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),

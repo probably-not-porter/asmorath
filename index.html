@@ -50,12 +50,13 @@
             });
             var bounds = [[0,0], [100,100]];
 
-            var base1 = L.imageOverlay('Asmorath.png', bounds).addTo(map); // basemaps
+            var base1 = L.imageOverlay('layers/Asmorath.png', bounds).addTo(map); // basemaps
 
             // overlays
-            var political = L.imageOverlay('political.png', bounds); 
-            var techtonic = L.imageOverlay('techtonics.png', bounds);
-            var terrain = L.imageOverlay('terrain.png', bounds);
+            var political = L.imageOverlay('layers/political.png', bounds); 
+            var volcanic = L.imageOverlay('layers/volcanic.png', bounds);
+            var terrain = L.imageOverlay('layers/terrain.png', bounds);
+            var oceans = L.imageOverlay('layers/oceans.png', bounds);
 
             // LINEAR MEASURE
             map.addControl(new L.Control.LinearMeasurement({
@@ -98,16 +99,16 @@
 
             // ======================= MAPS ===========================
             var baseMaps = {
-                "Base Layer 1": base1
+                "Political Map": political,
+                "Biome Map": terrain
             };
             var overlayMaps = {
-                "Political Boundaries": political,
-                "Terrain Overlay": terrain,
-                "Techtonic Faults": techtonic,
-                "Grid Lines": grid
+                "Volcanic Activity": volcanic,
+                "Grid Lines": grid,
+                "Ocean Map": oceans
             };
             map.fitBounds(bounds);
-            var layerControl = L.control.layers(null, overlayMaps).addTo(map);
+            var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
         </script>
     </body>
 </html>

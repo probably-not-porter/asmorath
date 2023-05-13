@@ -124,21 +124,21 @@
             });
             // ===================== geographical Markers =====================
             // Crater
-            var e1 = L.marker([37.86, 65.28], {icon: greenIconL}).bindPopup(
+            var e1 = L.marker([37.86, 65.28], {icon: greenIconS}).bindPopup(
                 `<h2>Dasmor Crater</h2>
                 <p>The crator is the result of a massive meteor that hit the planet 50-60 million years ago. Possibly the root cause of techtonic/volcanic activity in Panasmor, and the creation of the Dasmor Isles.</p>
                 `
             );
 
             // Lake
-            var e2 = L.marker([44.31, 46.82], {icon: greenIconL}).bindPopup(
+            var e2 = L.marker([44.31, 46.82], {icon: greenIconS}).bindPopup(
                 `<h2>Lake of Mists</h2>
                 <p>The lake is extremely deep, reaching to far below sea level. It was formed billions of years ago in the early stages of the planet, when the continents formed, and long before they split. The lake itself was formed in the caldera of the ancient supervolcano that formed the continents.</p>
                 `
             );
 
             // Western Mantle Plume
-            var e3 = L.marker([29.93, 17.44], {icon: greenIconL}).bindPopup(
+            var e3 = L.marker([29.93, 17.44], {icon: greenIconS}).bindPopup(
                 `<h2>Western Mantle Plume</h2>
                 <p>This island chain is some of the newest geology on the planet, the result of the main Panasmor plate slowly breaking and colliding with its neighbors.</p>
                 <a href='https://en.wikipedia.org/wiki/Mantle_plume'>Mantle Plume info</a>
@@ -149,7 +149,8 @@
 
             // ================= cities
             var c1 = L.marker([39.86, 54.96], {icon: blueIconL}).bindPopup(
-                `<h2>Quinterra (First Prefecture)</h2>`
+                `<h2>Quinterra (First Prefecture)</h2>
+                <p>This is a metropolis of sorts. By far the most populous, Quinterra is the heart of trade in Panasmor and as a result people from each nation coalesce there selling their exports and trading knowledge. Many merchants from the other lands make the journey to Quinterra in order to restock on wares and or sell wholesale their excess supplies. This is why it is conveniently located somewhat centrally to each of the other nations.</p>`
             );
             var c2 = L.marker([39.39, 55.84], {icon: blueIconS}).bindPopup(
                 `<h2>Brothstone</h2>`

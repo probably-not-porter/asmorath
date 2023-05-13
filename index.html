@@ -56,7 +56,6 @@
             var political = L.imageOverlay('layers/political.png', bounds); 
             var volcanic = L.imageOverlay('layers/volcanic.png', bounds);
             var terrain = L.imageOverlay('layers/terrain.png', bounds);
-            var oceans = L.imageOverlay('layers/oceans.png', bounds);
 
             // LINEAR MEASURE
             map.addControl(new L.Control.LinearMeasurement({
@@ -71,25 +70,75 @@
                 document.getElementById("coord").innerText = `Lat: ${lat}, Long: ${lng}`;
             });
 
+            // ICONS
+            // Icon options
+            var blueIconL = L.icon({
+                iconUrl: 'icons/icon-blue.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [26, 44],
+                shadowSize:   [42, 44],
+                iconAnchor:   [13, 44],
+                shadowAnchor:   [15,44]
+            });
+            var blueIconS = L.icon({
+                iconUrl: 'icons/icon-blue.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [16, 28],
+                shadowSize:   [32, 28],
+                iconAnchor:   [8, 28],
+                shadowAnchor:   [12,28]
+            });
 
+            var greenIconL = L.icon({
+                iconUrl: 'icons/icon-green.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [26, 44],
+                shadowSize:   [42, 44],
+                iconAnchor:   [13, 44],
+                shadowAnchor:   [15,44]
+            });
+            var greenIconS = L.icon({
+                iconUrl: 'icons/icon-green.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [16, 28],
+                shadowSize:   [32, 28],
+                iconAnchor:   [8, 28],
+                shadowAnchor:   [12,28]
+            });
 
+            var redIconL = L.icon({
+                iconUrl: 'icons/icon-red.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [26, 44],
+                shadowSize:   [42, 44],
+                iconAnchor:   [13, 44],
+                shadowAnchor:   [15,44]
+            });
+            var redIconS = L.icon({
+                iconUrl: 'icons/icon-red.png',
+                shadowUrl: 'icons/icon-shadow.png',
+                iconSize:     [16, 28],
+                shadowSize:   [32, 28],
+                iconAnchor:   [8, 28],
+                shadowAnchor:   [12,28]
+            });
             // ===================== geographical Markers =====================
             // Crater
-            var e1 = L.marker([37.86, 65.28]).bindPopup(
+            var e1 = L.marker([37.86, 65.28], {icon: greenIconL}).bindPopup(
                 `<h2>Dasmor Crater</h2>
                 <p>The crator is the result of a massive meteor that hit the planet 50-60 million years ago. Possibly the root cause of techtonic/volcanic activity in Panasmor, and the creation of the Dasmor Isles.</p>
                 `
             );
 
             // Lake
-            var e2 = L.marker([44.31, 46.82]).bindPopup(
-                `<h2>Big Lake</h2>
+            var e2 = L.marker([44.31, 46.82], {icon: greenIconL}).bindPopup(
+                `<h2>Lake of Mists</h2>
                 <p>The lake is extremely deep, reaching to far below sea level. It was formed billions of years ago in the early stages of the planet, when the continents formed, and long before they split. The lake itself was formed in the caldera of the ancient supervolcano that formed the continents.</p>
                 `
             );
 
             // Western Mantle Plume
-            var e3 = L.marker([29.93, 17.44]).bindPopup(
+            var e3 = L.marker([29.93, 17.44], {icon: greenIconL}).bindPopup(
                 `<h2>Western Mantle Plume</h2>
                 <p>This island chain is some of the newest geology on the planet, the result of the main Panasmor plate slowly breaking and colliding with its neighbors.</p>
                 <a href='https://en.wikipedia.org/wiki/Mantle_plume'>Mantle Plume info</a>
@@ -97,6 +146,16 @@
             );
 
             var geographical = L.layerGroup([e1,e2,e3]);
+
+            // ================= cities
+            var c1 = L.marker([39.86, 54.96], {icon: blueIconL}).bindPopup(
+                `<h2>Quinterra (First Prefecture)</h2>`
+            );
+            var c2 = L.marker([39.39, 55.84], {icon: blueIconS}).bindPopup(
+                `<h2>Brothstone</h2>`
+            );
+
+            var cities = L.layerGroup([c1,c2]);
 
 
             var l1 = L.polyline([[10, 0], [10, 100]], {color: 'black', weight: '1',  dashArray: '5, 5', dashOffset: '0'}),
@@ -119,11 +178,11 @@
             var overlayMaps = {
                 "Volcanic Activity": volcanic,
                 "Grid Lines": grid,
-                "Ocean Map": oceans,
-                "Geographical Features": geographical
+                "Geographical Features": geographical,
+                "Cities and Towns": cities
             };
             map.fitBounds(bounds);
-            var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+            L.control.layers(baseMaps, overlayMaps).addTo(map);
         </script>
     </body>
 </html>

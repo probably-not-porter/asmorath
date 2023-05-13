@@ -36,6 +36,7 @@
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
         crossorigin=""></script>
         <script src="plugins/Leaflet.LinearMeasurement.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
         <div id="map"></div>
@@ -184,6 +185,14 @@
             };
             map.fitBounds(bounds);
             L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+
+            $(document).ready(function(){
+                jQuery('img').each(function(){
+                    jQuery(this).attr('src',jQuery(this).attr('src')+ '?' + (new Date()).getTime());
+                });
+            });
         </script>
     </body>
 </html>

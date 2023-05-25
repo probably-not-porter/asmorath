@@ -70,6 +70,11 @@
                 let lng = Math.round(ev.latlng.lng * 100) / 100;
                 document.getElementById("coord").innerText = `Lat: ${lat}, Long: ${lng}`;
             });
+            map.addEventListener('click', function(ev) {
+                let lat = Math.round(ev.latlng.lat * 100) / 100;
+                let lng = Math.round(ev.latlng.lng * 100) / 100;
+                copyToClipboard(`POINT(Lat: ${lat}, Long: ${lng})`);
+            });
 
             // ICONS
             // Icon options
@@ -193,6 +198,16 @@
                     jQuery(this).attr('src',jQuery(this).attr('src')+ '?' + (new Date()).getTime());
                 });
             });
+
+            function copyToClipboard(text)
+            {
+                var dummy = document.createElement("input");
+                document.body.appendChild(dummy);
+                dummy.setAttribute('value', text);
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+            }
         </script>
     </body>
 </html>

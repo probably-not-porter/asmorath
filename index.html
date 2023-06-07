@@ -156,7 +156,7 @@
             // ================= cities ==========================
 
             // Quinterra // 1st Prefecture:
-            var quinterra_1 = L.marker([39.86, 54.96], {icon: blueIconL}).bindPopup(
+            var quinterra_1 = L.marker([40.72, 53.726], {icon: blueIconL}).bindPopup(
                 `<h2>Main St Trade District</h2>`
             );
             var quinterra_2 = L.marker([39.39, 55.84], {icon: blueIconS}).bindPopup(
@@ -164,6 +164,9 @@
             );
             var quinterra_3 = L.marker([38.84, 51.69], {icon: blueIconS}).bindPopup(
                 `<h2>Mead’s Marsh</h2>`
+            );
+            var quinterra_6 = L.marker([39.23, 54.06], {icon: blueIconS}).bindPopup(
+                `<h2>Tarrien</h2>`
             );
 
             // 2nd Prefecture
@@ -173,17 +176,7 @@
             var quinterra_5 = L.marker([35.7, 51.59], {icon: blueIconS}).bindPopup(
                 `<h2>Sheridan Farming District</h2>`
             );
-
-            // 3rd Prefecture
-            var quinterra_6 = L.marker([36.52, 57.05], {icon: blueIconS}).bindPopup(
-                `<h2>State Owned Mine #1</h2>`
-            );
-            var quinterra_7 = L.marker([38.14, 58.66], {icon: blueIconS}).bindPopup(
-                `<h2>State Owned Mine #2</h2>`
-            );
-            var quinterra_8 = L.marker([41.3, 60.03], {icon: blueIconS}).bindPopup(
-                `<h2>State Owned Mine #3</h2>`
-            );
+            
 
 
             // Kanasmora
@@ -354,7 +347,7 @@
 
 
             var cities = L.layerGroup([
-                quinterra_1, quinterra_2, quinterra_3, quinterra_4, quinterra_5, quinterra_6, quinterra_7, quinterra_8,
+                quinterra_1, quinterra_2, quinterra_3, quinterra_4, quinterra_5, quinterra_6,
                 kanasmora_1, kanasmora_2, kanasmora_3, kanasmora_4, kanasmora_5, kanasmora_6, kanasmora_7,
                 orthomena_1, orthomena_2, orthomena_3, orthomena_4, orthomena_5, orthomena_6, orthomena_7, orthomena_8, orthomena_9,
                 demacia_1, demacia_2, demacia_3, demacia_4,
@@ -363,6 +356,26 @@
                 principium_1, principium_2, principium_3, principium_4, principium_5, principium_6,
                 damascyrna_1, damascyrna_2, damascyrna_3, damascyrna_4, damascyrna_5,
                 scypia_1, scypia_2, scypia_3, scypia_4, scypia_5, scypia_6, scypia_7
+            ]);
+
+            // ================= other ==========================
+            var ruins_1 = L.marker([39.69, 56.34], {icon: redIconS}).bindPopup(
+                `<h2>Klithian Tower Ruins</h2>`
+            );
+
+            var mine_1 = L.marker([36.52, 57.05], {icon: redIconS}).bindPopup(
+                `<h2>State Owned Mine #1</h2>`
+            );
+            var mine_2 = L.marker([38.14, 58.66], {icon: redIconS}).bindPopup(
+                `<h2>State Owned Mine #2</h2>`
+            );
+            var mine_3 = L.marker([41.3, 60.03], {icon: redIconS}).bindPopup(
+                `<h2>State Owned Mine #3</h2>`
+            );
+
+            var other = L.layerGroup([
+                ruins_1,
+                mine_1, mine_2, mine_3
             ]);
 
 
@@ -387,7 +400,8 @@
                 "Volcanic Activity": volcanic,
                 "Grid Lines": grid,
                 "Geographical Features": geographical,
-                "Cities and Towns": cities
+                "Cities and Towns": cities,
+                "Ruins and Other Locations": other
             };
             map.fitBounds(bounds);
             L.control.layers(baseMaps, overlayMaps).addTo(map);

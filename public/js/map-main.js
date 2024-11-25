@@ -14,7 +14,8 @@ export function mapMain(bounds) {
     map.addEventListener('click', function(ev) {
         let lat = Math.round(ev.latlng.lat * 100) / 100;
         let lng = Math.round(ev.latlng.lng * 100) / 100;
-        copyToClipboard(`POINT(Lat: ${lat}, Long: ${lng})`);
+        copyToClipboard(`${lat},${lng}`);
+        console.log("copied");
     });
     map.on('zoomend', function (e) {
         let zoom = map.getZoom();
@@ -23,4 +24,15 @@ export function mapMain(bounds) {
     });
 
     return map
+}
+
+// UTIL
+function copyToClipboard(text)
+{
+    var dummy = document.createElement("input");
+    document.body.appendChild(dummy);
+    dummy.setAttribute('value', text);
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
 }

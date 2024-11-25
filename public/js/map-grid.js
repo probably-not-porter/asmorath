@@ -27,5 +27,24 @@ export function mapGrid() {
 
     return map_grid
 }
+// export function mapGrid() {
+//     L.GridLayer.DebugCoords = L.GridLayer.extend({
+//         createTile: function (coords) {
+//             var tile = document.createElement('div');
+//             tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
+//             tile.style.outline = '1px solid red';
+//             return tile;
+//         }
+//     });
+    
+//     L.gridLayer.debugCoords = function(opts) {
+//         let grid = new L.GridLayer.DebugCoords(opts);
+//         grid.bringToFront()
+//         return grid
+//     };
+
+    
+//     return L.gridLayer.debugCoords();
+// }
   
   

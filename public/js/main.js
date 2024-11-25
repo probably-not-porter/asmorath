@@ -29,8 +29,8 @@ window.onload = function () {
     var geographical = mapGeo();
 
     // ===== Image Map Group =====
+    map.addLayer(terrain)
     var imgMaps = {
-        "Base Map": basemap,
         "Political Map": political,
         "Biome Map": terrain
     };
@@ -45,6 +45,7 @@ window.onload = function () {
     };
 
     L.control.layers(imgMaps,featureMaps).addTo(map);
+
 
 
     // ===== CREATE FINAL MAP =====

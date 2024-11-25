@@ -14,7 +14,7 @@ export function mapMain(bounds) {
     map.addEventListener('click', function(ev) {
         let lat = Math.round(ev.latlng.lat * 100) / 100;
         let lng = Math.round(ev.latlng.lng * 100) / 100;
-        copyToClipboard(`${lat},${lng}`);
+        copyToClipboard(`${lat}, ${lng}`);
         console.log("copied");
     });
     map.on('zoomend', function (e) {

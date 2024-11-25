@@ -18,25 +18,25 @@ var blueIconS = L.icon({
 // ================= cities ==========================
 export function mapCities() {
     // Quinterra // 1st Prefecture:
-    var quinterra_1 = L.marker([40.72, 53.726], {icon: blueIconL}).bindPopup(
+    var quinterra_1 = L.marker([45.25,55.56], {icon: blueIconL}).bindPopup(
         `<h2>Main St Trade District</h2>
         <p1>Capital of Quinterra, and seat of 1st Prefecture</p1>`
     );
-    var quinterra_2 = L.marker([39.39, 55.84], {icon: blueIconS}).bindPopup(
+    var quinterra_2 = L.marker([43.25, 57.45], {icon: blueIconS}).bindPopup(
         `<h2>Brothstone</h2>`
     );
-    var quinterra_3 = L.marker([38.84, 51.69], {icon: blueIconS}).bindPopup(
+    var quinterra_3 = L.marker([43.89, 55.38], {icon: blueIconS}).bindPopup(
         `<h2>Mead’s Marsh</h2>`
     );
-    var quinterra_6 = L.marker([39.23, 54.06], {icon: blueIconS}).bindPopup(
+    var quinterra_6 = L.marker([44.34, 59.91], {icon: blueIconS}).bindPopup(
         `<h2>Tarrien</h2>`
     );
 
     // 2nd Prefecture
-    var quinterra_4 = L.marker([40.88, 58.09], {icon: blueIconS}).bindPopup(
+    var quinterra_4 = L.marker([42.3, 52.7], {icon: blueIconS}).bindPopup(
         `<h2>Kinsey’s Distillery (Company Town)</h2>`
     );
-    var quinterra_5 = L.marker([35.7, 51.59], {icon: blueIconS}).bindPopup(
+    var quinterra_5 = L.marker([37.97, 51.16], {icon: blueIconS}).bindPopup(
         `<h2>Sheridan Farming District</h2>`
     );
 
@@ -66,13 +66,13 @@ export function mapCities() {
     );
 
     // orthomena
-    var orthomena_1 = L.marker([64.13, 56], {icon: blueIconS}).bindPopup(
+    var orthomena_1 = L.marker([64.75, 55.97], {icon: blueIconS}).bindPopup(
         `<h2>Torel</h2>`
     );
     var orthomena_2 = L.marker([57.08, 57.48], {icon: blueIconS}).bindPopup(
         `<h2>Tethani</h2>`
     );
-    var orthomena_3 = L.marker([63.05, 54.41], {icon: blueIconL}).bindPopup(
+    var orthomena_3 = L.marker([63.84, 54.72], {icon: blueIconL}).bindPopup(
         `<h2>Kart Hek</h2>
         <p1>Capital of Orthomena</p1>`
     );
@@ -82,16 +82,16 @@ export function mapCities() {
     var orthomena_5 = L.marker([70.25, 60.34], {icon: blueIconS}).bindPopup(
         `<h2>Skeirolt</h2>`
     );
-    var orthomena_6 = L.marker([65.61, 60.38], {icon: blueIconS}).bindPopup(
+    var orthomena_6 = L.marker([66.42, 59.84], {icon: blueIconS}).bindPopup(
         `<h2>Samerli</h2>`
     );
     var orthomena_7 = L.marker([56, 54.86], {icon: blueIconS}).bindPopup(
         `<h2>Chanakia</h2>`
     );
-    var orthomena_8 = L.marker([65.11, 53.3], {icon: blueIconS}).bindPopup(
+    var orthomena_8 = L.marker([65.14, 52.98], {icon: blueIconS}).bindPopup(
         `<h2>Sharak</h2>`
     );
-    var orthomena_9 = L.marker([61.39, 57.86], {icon: blueIconS}).bindPopup(
+    var orthomena_9 = L.marker([61.86, 57.5], {icon: blueIconS}).bindPopup(
         `<h2>Sphamilia</h2>`
     );
 
@@ -110,7 +110,7 @@ export function mapCities() {
     );
 
     //lucacia
-    var lucacia_1 = L.marker([42.58, 48.98], {icon: blueIconL}).bindPopup(
+    var lucacia_1 = L.marker([44.31, 49.53], {icon: blueIconL}).bindPopup(
         `<h2>District A</h2>
         <p1>Capital of Lucacia</p1>`
     );
@@ -122,14 +122,14 @@ export function mapCities() {
     );
 
     // Vespusa
-    var vespusa_1 = L.marker([45.13, 58.22], {icon: blueIconL}).bindPopup(
+    var vespusa_1 = L.marker([48.17, 60.7], {icon: blueIconL}).bindPopup(
         `<h2>Karghold</h2>
         <p1>Capital of Vespusa</p1>`
     );
-    var vespusa_2 = L.marker([44.84, 52.09], {icon: blueIconS}).bindPopup(
+    var vespusa_2 = L.marker([46.67, 50.84], {icon: blueIconS}).bindPopup(
         `<h2>Groffton</h2>`
     );
-    var vespusa_3 = L.marker([43.63, 56.19], {icon: blueIconS}).bindPopup(
+    var vespusa_3 = L.marker([45.77, 57.47], {icon: blueIconS}).bindPopup(
         `<h2>Rek’tom</h2>`
     );
     var vespusa_4 = L.marker([52.81, 67.81], {icon: blueIconS}).bindPopup(
@@ -158,7 +158,7 @@ export function mapCities() {
     var principium_4 = L.marker([38.67, 46.89], {icon: blueIconS}).bindPopup(
         `<h2>Northmanshire</h2>`
     );
-    var principium_5 = L.marker([33.45, 50.05], {icon: blueIconL}).bindPopup(
+    var principium_5 = L.marker([35.83, 48.56], {icon: blueIconL}).bindPopup(
         `<h2>Phirrelington</h2>
         <p1>Capital of Principium</p1>`
     );

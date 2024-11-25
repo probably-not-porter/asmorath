@@ -43,25 +43,25 @@ export function mapCities() {
 
 
     // Kanasmora
-    var kanasmora_1 = L.marker([77.75, 29.19], {icon: blueIconS}).bindPopup(
+    var kanasmora_1 = L.marker([78.63, 28.67], {icon: blueIconS}).bindPopup(
         `<h2>Sarethheim</h2>`
     );
-    var kanasmora_2 = L.marker([76.97, 37.56], {icon: blueIconS}).bindPopup(
+    var kanasmora_2 = L.marker([77.67, 36.86], {icon: blueIconS}).bindPopup(
         `<h2>Samilheim</h2>`
     );
-    var kanasmora_3 = L.marker([75.78, 48.97], {icon: blueIconS}).bindPopup(
+    var kanasmora_3 = L.marker([76.36, 48.7], {icon: blueIconS}).bindPopup(
         `<h2>Stilheim</h2>`
     );
-    var kanasmora_4 = L.marker([74.47, 56.28], {icon: blueIconS}).bindPopup(
+    var kanasmora_4 = L.marker([75.13, 56.25], {icon: blueIconS}).bindPopup(
         `<h2>Spalfheim</h2>`
     );
-    var kanasmora_5 = L.marker([76.06, 63.13], {icon: blueIconS}).bindPopup(
+    var kanasmora_5 = L.marker([77.03, 62.76], {icon: blueIconS}).bindPopup(
         `<h2>Shendheim</h2>`
     );
-    var kanasmora_6 = L.marker([78.31, 66.75], {icon: blueIconS}).bindPopup(
+    var kanasmora_6 = L.marker([79.16, 66.67], {icon: blueIconS}).bindPopup(
         `<h2>Smerheim</h2>`
     );
-    var kanasmora_7 = L.marker([72.06, 68.69], {icon: blueIconS}).bindPopup(
+    var kanasmora_7 = L.marker([72.75, 68.2], {icon: blueIconS}).bindPopup(
         `<h2>Skerlheim </h2>`
     );
 

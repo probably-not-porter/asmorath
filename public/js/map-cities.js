@@ -20,93 +20,119 @@ export function mapCities() {
     // Quinterra // 1st Prefecture:
     var quinterra_1 = L.marker([45.25,55.56], {icon: blueIconL}).bindPopup(
         `<h2>Main St Trade District</h2>
-        <p1>Capital of Quinterra, and seat of 1st Prefecture</p1>`
+        <p1>Capital of Quinterra</p1><br>
+        <p1>Seat of 1st Prefecture</p1>`
     );
     var quinterra_2 = L.marker([43.25, 57.45], {icon: blueIconS}).bindPopup(
-        `<h2>Brothstone</h2>`
+        `<h2>Brothstone</h2>
+        <p1>Quinterra</p1>`
     );
     var quinterra_3 = L.marker([43.89, 55.38], {icon: blueIconS}).bindPopup(
-        `<h2>Mead’s Marsh</h2>`
+        `<h2>Mead’s Marsh</h2>
+        <p1>Quinterra</p1>`
     );
     var quinterra_6 = L.marker([44.34, 59.91], {icon: blueIconS}).bindPopup(
-        `<h2>Tarrien</h2>`
+        `<h2>Tarrien</h2>
+        <p1>Quinterra</p1>`
     );
 
     // 2nd Prefecture
     var quinterra_4 = L.marker([42.3, 52.7], {icon: blueIconS}).bindPopup(
-        `<h2>Kinsey’s Distillery (Company Town)</h2>`
+        `<h2>Kinsey’s Distillery</h2>
+        <p1>(Company Town)</p1><br>
+        <p1>Quinterra</p1>`
     );
     var quinterra_5 = L.marker([37.97, 51.16], {icon: blueIconS}).bindPopup(
-        `<h2>Sheridan Farming District</h2>`
+        `<h2>Sheridan Farming District</h2>
+        <p1>Quinterra</p1>`
     );
 
 
 
     // Kanasmora
     var kanasmora_1 = L.marker([78.63, 28.67], {icon: blueIconS}).bindPopup(
-        `<h2>Sarethheim</h2>`
+        `<h2>Sarethheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_2 = L.marker([77.67, 36.86], {icon: blueIconS}).bindPopup(
-        `<h2>Samilheim</h2>`
+        `<h2>Samilheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_3 = L.marker([76.36, 48.7], {icon: blueIconS}).bindPopup(
-        `<h2>Stilheim</h2>`
+        `<h2>Stilheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_4 = L.marker([75.13, 56.25], {icon: blueIconS}).bindPopup(
-        `<h2>Spalfheim</h2>`
+        `<h2>Spalfheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_5 = L.marker([77.03, 62.76], {icon: blueIconS}).bindPopup(
-        `<h2>Shendheim</h2>`
+        `<h2>Shendheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_6 = L.marker([79.16, 66.67], {icon: blueIconS}).bindPopup(
-        `<h2>Smerheim</h2>`
+        `<h2>Smerheim</h2>
+        <p1>Kanasmora</p1>`
     );
     var kanasmora_7 = L.marker([72.75, 68.2], {icon: blueIconS}).bindPopup(
-        `<h2>Skerlheim </h2>`
+        `<h2>Skerlheim </h2>
+        <p1>Kanasmora</p1>`
     );
 
     // orthomena
     var orthomena_1 = L.marker([64.75, 55.97], {icon: blueIconS}).bindPopup(
-        `<h2>Torel</h2>`
+        `<h2>Torel</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_2 = L.marker([57.08, 57.48], {icon: blueIconS}).bindPopup(
-        `<h2>Tethani</h2>`
+        `<h2>Tethani</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_3 = L.marker([63.84, 54.72], {icon: blueIconL}).bindPopup(
         `<h2>Kart Hek</h2>
         <p1>Capital of Orthomena</p1>`
     );
     var orthomena_4 = L.marker([57.52, 51.33], {icon: blueIconS}).bindPopup(
-        `<h2>Catharn</h2>`
+        `<h2>Catharn</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_5 = L.marker([70.25, 60.34], {icon: blueIconS}).bindPopup(
-        `<h2>Skeirolt</h2>`
+        `<h2>Skeirolt</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_6 = L.marker([66.42, 59.84], {icon: blueIconS}).bindPopup(
-        `<h2>Samerli</h2>`
+        `<h2>Samerli</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_7 = L.marker([56, 54.86], {icon: blueIconS}).bindPopup(
-        `<h2>Chanakia</h2>`
+        `<h2>Chanakia</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_8 = L.marker([65.14, 52.98], {icon: blueIconS}).bindPopup(
-        `<h2>Sharak</h2>`
+        `<h2>Sharak</h2>
+        <p1>Orthomena</p1>`
     );
     var orthomena_9 = L.marker([61.86, 57.5], {icon: blueIconS}).bindPopup(
-        `<h2>Sphamilia</h2>`
+        `<h2>Sphamilia</h2>
+        <p1>Orthomena</p1>`
     );
 
     //demacia
     var demacia_1 = L.marker([45.3, 43.81], {icon: blueIconS}).bindPopup(
-        `<h2>Saraleth Commune</h2>`
+        `<h2>Saraleth Commune</h2>
+        <p1>Demacia</p1>`
     );
     var demacia_2 = L.marker([39.45, 40.33], {icon: blueIconS}).bindPopup(
-        `<h2>Bylantia Intentional Community</h2>`
+        `<h2>Bylantia Intentional Community</h2>
+        <p1>Demacia</p1>`
     );
     var demacia_3 = L.marker([46.91, 37.45], {icon: blueIconS}).bindPopup(
-        `<h2>Shirazi Consortium</h2>`
+        `<h2>Shirazi Consortium</h2>
+        <p1>Demacia</p1>`
     );
     var demacia_4 = L.marker([48.36, 44.84], {icon: blueIconS}).bindPopup(
-        `<h2>Quirria Commune</h2>`
+        `<h2>Quirria Commune</h2>
+        <p1>Demacia</p1>`
     );
 
     //lucacia
@@ -115,10 +141,12 @@ export function mapCities() {
         <p1>Capital of Lucacia</p1>`
     );
     var lucacia_2 = L.marker([40.58, 45.52], {icon: blueIconS}).bindPopup(
-        `<h2>District B</h2>`
+        `<h2>District B</h2>
+        <p1>Lucacia</p1>`
     );
     var lucacia_3 = L.marker([46.08, 50.02], {icon: blueIconS}).bindPopup(
-        `<h2>District C</h2>`
+        `<h2>District C</h2>
+        <p1>Lucacia</p1>`
     );
 
     // Vespusa
@@ -127,43 +155,54 @@ export function mapCities() {
         <p1>Capital of Vespusa</p1>`
     );
     var vespusa_2 = L.marker([46.67, 50.84], {icon: blueIconS}).bindPopup(
-        `<h2>Groffton</h2>`
+        `<h2>Groffton</h2>
+        <p1>Vespusa</p1>`
     );
     var vespusa_3 = L.marker([45.77, 57.47], {icon: blueIconS}).bindPopup(
-        `<h2>Rek’tom</h2>`
+        `<h2>Rek’tom</h2>
+        <p1>Vespusa</p1>`
     );
     var vespusa_4 = L.marker([52.81, 67.81], {icon: blueIconS}).bindPopup(
-        `<h2>Shakohn’s Point</h2>`
+        `<h2>Shakohn’s Point</h2>
+        <p1>Vespusa</p1>`
     );
     var vespusa_5 = L.marker([46.5, 66.31], {icon: blueIconS}).bindPopup(
-        `<h2>Shal’tom</h2>`
+        `<h2>Shal’tom</h2>
+        <p1>Vespusa</p1>`
     );
     var vespusa_6 = L.marker([51.19, 59.13], {icon: blueIconS}).bindPopup(
-        `<h2>Skrel’nek</h2>`
+        `<h2>Skrel’nek</h2>
+        <p1>Vespusa</p1>`
     );
     var vespusa_7 = L.marker([51.06, 53.53], {icon: blueIconS}).bindPopup(
-        `<h2>Shok’tas</h2>`
+        `<h2>Shok’tas</h2>
+        <p1>Vespusa</p1>`
     );
 
     // Principium
     var principium_1 = L.marker([37.89, 37.3], {icon: blueIconS}).bindPopup(
-        `<h2>Skifton</h2>`
+        `<h2>Skifton</h2>
+        <p1>Principium</p1>`
     );
     var principium_2 = L.marker([34.78, 37.61], {icon: blueIconS}).bindPopup(
-        `<h2>Samithberg</h2>`
+        `<h2>Samithberg</h2>
+        <p1>Principium</p1>`
     );
     var principium_3 = L.marker([32.81, 38.08], {icon: blueIconS}).bindPopup(
-        `<h2>Jarlton</h2>`
+        `<h2>Jarlton</h2>
+        <p1>Principium</p1>`
     );
     var principium_4 = L.marker([38.67, 46.89], {icon: blueIconS}).bindPopup(
-        `<h2>Northmanshire</h2>`
+        `<h2>Northmanshire</h2>
+        <p1>Principium</p1>`
     );
     var principium_5 = L.marker([35.83, 48.56], {icon: blueIconL}).bindPopup(
         `<h2>Phirrelington</h2>
         <p1>Capital of Principium</p1>`
     );
     var principium_6 = L.marker([35.5, 41.89], {icon: blueIconS}).bindPopup(
-        `<h2>Joffton</h2>`
+        `<h2>Joffton</h2>
+        <p1>Principium</p1>`
     );
 
 
@@ -173,45 +212,55 @@ export function mapCities() {
 
     // Damascyrna
     var damascyrna_1 = L.marker([31.09, 58.59], {icon: blueIconS}).bindPopup(
-        `<h2>Kraise</h2>`
+        `<h2>Kraise</h2>
+        <p1>Damascyrna</p1>`
     );
     var damascyrna_2 = L.marker([35.25, 58.47], {icon: blueIconL}).bindPopup(
         `<h2>Scryneland</h2>
         <p1>Capital of Damascyrna</p1>`
     );
     var damascyrna_3 = L.marker([36, 61.81], {icon: blueIconS}).bindPopup(
-        `<h2>Terovia</h2>`
+        `<h2>Terovia</h2>
+        <p1>Damascyrna</p1>`
     );
     var damascyrna_4 = L.marker([33.38, 64.59], {icon: blueIconS}).bindPopup(
-        `<h2>K’naktu</h2>`
+        `<h2>K’naktu</h2>
+        <p1>Damascyrna</p1>`
     );
     var damascyrna_5 = L.marker([30.31, 61.88], {icon: blueIconS}).bindPopup(
-        `<h2>Sevarrro</h2>`
+        `<h2>Sevarrro</h2>
+        <p1>Damascyrna</p1>`
     );
 
 
     // Scypia
     var scypia_1 = L.marker([42.52, 66.24], {icon: blueIconS}).bindPopup(
-        `<h2>Ísdilmeall</h2>`
+        `<h2>Ísdilmeall</h2>
+        <p1>Scypia</p1>`
     );
     var scypia_2 = L.marker([39.78, 69.78], {icon: blueIconS}).bindPopup(
-        `<h2>Kannaktoh</h2>`
+        `<h2>Kannaktoh</h2>
+        <p1>Scypia</p1>`
     );
     var scypia_3 = L.marker([29.66, 65.72], {icon: blueIconS}).bindPopup(
-        `<h2>Tek’ma-te</h2>`
+        `<h2>Tek’ma-te</h2>
+        <p1>Scypia</p1>`
     );
     var scypia_4 = L.marker([33.22, 68.38], {icon: blueIconS}).bindPopup(
-        `<h2>Ska’a-ti</h2>`
+        `<h2>Ska’a-ti</h2>
+        <p1>Scypia</p1>`
     );
     var scypia_5 = L.marker([38.94, 72], {icon: blueIconS}).bindPopup(
-        `<h2>Shin Roma</h2>`
+        `<h2>Shin Roma</h2>
+        <p1>Scypia</p1>`
     );
     var scypia_6 = L.marker([34, 70.41], {icon: blueIconL}).bindPopup(
         `<h2>New Skireneland</h2>
         <p1>Capital of Scypia</p1>`
     );
     var scypia_7 = L.marker([28.94, 77.38], {icon: blueIconS}).bindPopup(
-        `<h2>Serrato</h2>`
+        `<h2>Serrato</h2>
+        <p1>Scypia</p1>`
     );
 
 

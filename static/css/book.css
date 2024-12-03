@@ -1,0 +1,28 @@
+html{
+    background-image: url(/static/img/book_bg.JPG);
+    background-repeat: repeat;
+}
+*{
+    color: #333;
+}
+.map img{
+    width: 50vmin;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.map img:hover{
+    border: 1px dotted black;
+}
+.map{
+    display: inline-block;
+    font-size: 0px;
+    padding: 10px;
+}
+.map figcaption{
+    font-size: 12px;
+    background: rgba(0,0,0,0.1);
+}
+a{
+    text-decoration: underline;
+    cursor: pointer;
+}

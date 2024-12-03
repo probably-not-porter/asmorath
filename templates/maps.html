@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <figure class="map">
+        <img onclick="window.open(this.src, '_blank');" src="/static/img/layers/political.png"></img>
+        <figcaption>World Map Political</figcaption>
+    </figure>
+    <figure class="map">
+        <img onclick="window.open(this.src, '_blank');" src="/static/img/layers/terrain.png"></img>
+        <figcaption>World Map Terrain</figcaption>
+    </figure>
+    <figure class="map">
+        <img onclick="window.open(this.src, '_blank');" src="/static/img/layers/Asmorath.png"></img>
+        <figcaption>World Map Minimal</figcaption>
+    </figure>
+{% endblock %}

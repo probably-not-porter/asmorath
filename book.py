@@ -15,7 +15,7 @@ pages = [
         "subsec": []
     },
     {
-        "page": "cities.html",
+        "page": "geopolitical.html",
         "name": "Geopolitical Locations",
         "subsec": [
             {
@@ -77,7 +77,12 @@ pages = [
     {
         "page": "magic.html",
         "name": "Magic",
-        "subsec": []
+        "subsec": [
+            {
+                "page": "elemental_magic.html",
+                "name": "Elemental Magic"
+            }
+        ]
     },
     {
         "page": "races.html",
@@ -163,7 +168,7 @@ def get_next(page_path):
 
     else: # on a subpage
         if len(pages[int(page_index[0])]["subsec"]) > int(page_index[1]): # next subpage exists
-            return str(page_index[0]) + "." + str(int(page_index[1] + 1))
+            return str(page_index[0]) + "." + str(int(page_index[1]) + 1)
         else: # no next subpage
             if len(pages) > int(page_index[0]): # and the next page exists
                 return str(int(page_index[0]) + 1)

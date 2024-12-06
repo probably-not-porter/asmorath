@@ -11,11 +11,11 @@
         <ul>
         {% for page in pages %}
             {% set outer_loop = loop %}
-            <li><a href="/pages/{{loop.index0}}">{{loop.index0}} - {{page["name"]}}</a>
+            <li><a href="/pages/{{loop.index0}}">{{loop.index0}} {{page["name"]}}</a>
             {% if page["subsec"]|length > 0 %}
                 <ul>
                 {% for subpage in page["subsec"] %}
-                    <li><a href="/pages/{{outer_loop.index0}}.{{loop.index}}">{{outer_loop.index0}}.{{loop.index}} - {{subpage["name"]}}</a></li>
+                    <li><a href="/pages/{{outer_loop.index0}}.{{loop.index}}">{{outer_loop.index0}}.{{loop.index}} {{subpage["name"]}}</a></li>
                 {% endfor %}
                 </ul>
             {% endif %}

@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
 html{
     background-image: url(/static/img/book_bg.JPG);
     background-repeat: repeat;
+}
+h2{
+    text-align: center;
 }
 *{
     color: #333;
@@ -25,4 +30,22 @@ html{
 a{
     text-decoration: underline;
     cursor: pointer;
+}
+.nav{
+    text-align: center;
+    width: 100%;
+}
+.nav a{
+    padding: 5px;
+}
+.content{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+.bigletter {
+    
+    float: left;
+    font-size: 8.2em;
+    line-height: .7em;
 }

@@ -1,5 +1,6 @@
 from datetime import date
 from flask import Flask, jsonify, request, render_template
+import jinja2
 import json
 import os
 
@@ -12,6 +13,11 @@ pages = [
     {
         "page": "introduction.html",
         "name": "Introduction",
+        "subsec": []
+    },
+    {
+        "page": "history.html",
+        "name": "History",
         "subsec": []
     },
     {
@@ -81,6 +87,10 @@ pages = [
             {
                 "page": "elemental_magic.html",
                 "name": "Elemental Magic"
+            },
+            {
+                "page": "celestial_magic.html",
+                "name": "Celestial Magic"
             }
         ]
     },
@@ -130,13 +140,20 @@ def serve_page(page_path):
     
     page_prev = get_prev(page_path)
     page_next = get_next(page_path)
-    return render_template(page_html, 
-                           current_num=page_path, 
-                           current_name = get_page_name(page_path),
-                           next_num=page_next, 
-                           next_name = get_page_name(page_next),
-                           prev_num=page_prev,
-                           prev_name = get_page_name(page_prev))
+
+    try:
+        app.jinja_env.get_template(page_html)
+        return render_template(page_html, 
+                            current_num=page_path, 
+                            current_name = get_page_name(page_path),
+                            next_num=page_next, 
+                            next_name = get_page_name(page_next),
+                            prev_num=page_prev,
+                            prev_name = get_page_name(page_prev))
+    except jinja2.exceptions.TemplateNotFound:
+        return render_template("error.html")
+    
+    
 
 
 

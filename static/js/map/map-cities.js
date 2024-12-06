@@ -144,7 +144,7 @@ export function mapCities() {
         `<h2>District B</h2>
         <p1>Lucacia</p1>`
     );
-    var lucacia_3 = L.marker([46.08, 50.02], {icon: blueIconS}).bindPopup(
+    var lucacia_3 = L.marker([46.66, 50.86], {icon: blueIconS}).bindPopup(
         `<h2>District C</h2>
         <p1>Lucacia</p1>`
     );
@@ -154,7 +154,7 @@ export function mapCities() {
         `<h2>Karghold</h2>
         <p1>Capital of Vespusa</p1>`
     );
-    var vespusa_2 = L.marker([46.67, 50.84], {icon: blueIconS}).bindPopup(
+    var vespusa_2 = L.marker([45.17, 52.34], {icon: blueIconS}).bindPopup(
         `<h2>Groffton</h2>
         <p1>Vespusa</p1>`
     );

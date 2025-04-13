@@ -1,51 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
-html{
-    background-image: url(/static/img/book_bg.JPG);
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap");
+html {
+    background-image: url(/asmorath/static/img/book_bg.JPG);
     background-repeat: repeat;
 }
-h2{
+h2 {
     text-align: center;
 }
-*{
+* {
     color: #333;
 }
-.map img{
-    width: 50vmin;
+.map img {
+    width: 200px;
     border: 1px solid black;
     cursor: pointer;
 }
-.map img:hover{
+.map img:hover {
     border: 1px dotted black;
 }
-.map{
+.map {
     display: inline-block;
     font-size: 0px;
     padding: 10px;
+    margin: 0px;
 }
-.map figcaption{
+.map figcaption {
     font-size: 12px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
-a{
+a {
     text-decoration: underline;
     cursor: pointer;
 }
-.nav{
+.nav {
     text-align: center;
     width: 100%;
 }
-.nav a{
+.nav a {
     padding: 5px;
 }
-.content{
+.content {
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
 }
 .bigletter {
-    
     float: left;
     font-size: 8.2em;
-    line-height: .7em;
+    line-height: 0.7em;
 }

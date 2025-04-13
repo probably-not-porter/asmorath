@@ -1,24 +1,36 @@
-import {mapMain} from './map-main.js';
-import {mapGrid} from './map-grid.js';
-import {mapOther} from './map-other.js';
-import {mapCities} from './map-cities.js';
-import {mapGeo} from './map-geo.js';
+import { mapMain } from "./map-main.js";
+import { mapGrid } from "./map-grid.js";
+import { mapOther } from "./map-other.js";
+import { mapCities } from "./map-cities.js";
+import { mapGeo } from "./map-geo.js";
 
 // MAP SETTINGS
-var bounds = [[0,0], [100,100]]; // coord
+var bounds = [
+    [0, 0],
+    [100, 100],
+]; // coord
 
 window.onload = function () {
     var map = mapMain(bounds); // MAIN MAP OBJECT
     map.fitBounds(bounds);
 
-
-    
-
     // ===== Image Layers =====
-    var basemap = L.imageOverlay('/static/img/layers/Asmorath.png', bounds);
-    var political = L.imageOverlay('/static/img/layers/political.png', bounds); 
-    var volcanic = L.imageOverlay('/static/img/layers/volcanic.png', bounds);
-    var terrain = L.imageOverlay('/static/img/layers/terrain.png', bounds);
+    var basemap = L.imageOverlay(
+        "/asmorath/static/img/layers/Asmorath.png",
+        bounds,
+    );
+    var political = L.imageOverlay(
+        "/asmorath/static/img/layers/political.png",
+        bounds,
+    );
+    var volcanic = L.imageOverlay(
+        "/asmorath/static/img/layers/volcanic.png",
+        bounds,
+    );
+    var terrain = L.imageOverlay(
+        "/asmorath/static/img/layers/terrain.png",
+        bounds,
+    );
 
     // ===== Grid Layer =====
     var grid = mapGrid();
@@ -29,10 +41,10 @@ window.onload = function () {
     var geographical = mapGeo();
 
     // ===== Image Map Group =====
-    map.addLayer(terrain)
+    map.addLayer(terrain);
     var imgMaps = {
         "Political Map": political,
-        "Biome Map": terrain
+        "Biome Map": terrain,
     };
 
     // ===== Feature Map Group =====
@@ -41,17 +53,18 @@ window.onload = function () {
         "Grid Lines": grid,
         "Geographical Features": geographical,
         "Cities and Towns": cities,
-        "Ruins and Other Locations": other
+        "Ruins and Other Locations": other,
     };
 
-    L.control.layers(imgMaps,featureMaps).addTo(map);
-
-
+    L.control.layers(imgMaps, featureMaps).addTo(map);
 
     // ===== CREATE FINAL MAP =====
-    $(document).ready(function(){
-        jQuery('img').each(function(){
-            jQuery(this).attr('src',jQuery(this).attr('src')+ '?' + (new Date()).getTime());
+    $(document).ready(function () {
+        jQuery("img").each(function () {
+            jQuery(this).attr(
+                "src",
+                jQuery(this).attr("src") + "?" + new Date().getTime(),
+            );
         });
     });
-}
+};
